@@ -23,37 +23,48 @@ Things you may want to cover:
 
 * ...
 
-# chat-space DB設計
 
-##usersテーブル
+# chat-space DB設計
+## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |email|string|null: false|
 |password|string|null: false|
-|username|string|null: false|
-
+|name|string|null: false|
 ### Association
 - has_many :chats
 - has_many :comments
 
 
-## groups_usersテーブル
+## messagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|body|text||
+|image|string||
+|group_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :group
+- belongs_to :user
+- has_many :comments
 
+
+## groups_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-
 ### Association
 - belongs_to :group
 - belongs_to :user
 
-groupsテーブル
+
+## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|image|text||
-|text|text||
+|text|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 ### Association
+- belongs_to :group
 - belongs_to :user
-- has_many :comments
