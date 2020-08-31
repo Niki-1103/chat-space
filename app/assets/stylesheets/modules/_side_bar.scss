@@ -1,0 +1,70 @@
+.wrapper{
+  display: flex;
+}
+
+.side-bar {
+  box-sizing: border-box;
+  background-color: #253141;
+  width: 300px;
+  height: 100vh;
+  .header {
+  height: 100px;
+  width: 300px;
+  background-color: #253141;
+  display: flex;
+    &__user-name{
+    height: 20px;
+    width: calc(100% - 40px);
+    margin: auto;
+    align-items: center;
+    background-color: #253141;
+    display: flex;
+    justify-content: space-between;
+      .name {
+      display: inline-block;
+      font-size: 16px;
+      font-weight: bold;
+      color: #ffffff;
+      }
+      .icons{
+      width: 60px;
+      display: flex;
+      justify-content: flex-end;
+        .icon{
+        color: #ffffff;
+        margin-right: 5px;
+        }
+        .icon2{
+        color: #ffffff;
+        }
+      }
+    }
+  }
+    .side-bar__group-list {
+    background-color: #2f3e51;
+    height: calc(100vh - 100px);
+    width: 300px;
+      .group{
+      box-sizing: border-box;
+      font-size: 15px;
+      padding: 20px 20px 40px;
+      color: #ffffff;
+      font-weight: bold;
+        .message{
+        font-size: 11px;
+        padding-top: 5px;
+        }
+      }
+      .group2{
+      box-sizing: border-box;
+      font-size: 15px;
+      padding: 20px 20px 40px;
+      color: #ffffff;
+      font-weight: bold;
+        .message2{
+        font-size: 11px;
+        padding-top: 5px;
+        }
+      }
+    }
+}
