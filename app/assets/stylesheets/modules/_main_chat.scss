@@ -9,7 +9,7 @@
     width: calc(100vw - 300px);
     display: flex;
   }
-    .chat-main__group-info {
+    &__group-info {
       display: flex;
       width: 100%;
       margin-left: 40px;
@@ -41,7 +41,7 @@
     }
     }
     
-    .chat-main__message{
+    &__message{
     height: calc(100vh - 100px - 90px);
     width: calc(100vw - 300px);
     background-color: #fafafa;
@@ -132,7 +132,7 @@
         }
       }
     }
-    .chat-main__message-form{
+    &__message-form{
     height: 90px;
     width: calc(100vw - 300px);
     background-color: #d2d2d2;
