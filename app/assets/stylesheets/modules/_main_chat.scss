@@ -40,11 +40,11 @@
     }
   }
   &__message{
-  height: calc(100vh - 100px - 90px);
-  width: calc(100vw - 300px);
-  background-color: #fafafa;
-  border-top: #eeeeee;
-  overflow: scroll;
+    height: calc(100vh - 100px - 90px);
+    width: calc(100vw - 300px);
+    background-color: #fafafa;
+    border-top: #eeeeee;
+    overflow: scroll;
     .messages {
     margin-left: 40px;
     padding-top: 35px;
@@ -128,12 +128,12 @@
       margin-bottom: 46px;
       }
     }
-      }
+  }
   &__message-form{
-  height: 90px;
-  width: calc(100vw - 300px);
-  background-color: #d2d2d2;
-  display: flex;
+    height: 90px;
+    width: calc(100vw - 300px);
+    background-color: #d2d2d2;
+    display: flex;
     .form{
     display: flex;
     height: 50px;
