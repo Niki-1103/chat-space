@@ -12,6 +12,7 @@
   width: 300px;
   background-color: #253141;
   display: flex;
+  overflow: scroll;
     &__user-name{
     height: 20px;
     width: calc(100% - 40px);
