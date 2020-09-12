@@ -12,7 +12,6 @@
   width: 300px;
   background-color: #253141;
   display: flex;
-  overflow: scroll;
     &__user-name{
     height: 20px;
     width: calc(100% - 40px);
@@ -45,6 +44,7 @@
     background-color: #2f3e51;
     height: calc(100vh - 100px);
     width: 300px;
+    overflow: scroll;
       .group{
       box-sizing: border-box;
       font-size: 15px;

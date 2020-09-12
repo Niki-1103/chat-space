@@ -2,52 +2,31 @@
   .header
     .chat-main__group-info
       .group-name
-        テスト
+        = @group.name
         .user-name
-          Member:name
+          - @group.users.each do |user|
+            = user.name
       .edit
-        = link_to '#' do
+        = link_to edit_group_path(@group)do
           Edit
-        
+
   .chat-main__message
-    .messages
-      .upper-message
-        .name
-          へい
-        .date
-          2020/8/33
-      .lower-message
-        おはよう！
-      .upper-message2
-        .name2
-          せい
-        .date2
-          2020/8/1
-      .lower-message2
-        morning
-      .upper-message3
-        .name3
-          れい
-        .date3
-          2020/8/1
-      .lower-message3
-        ola!
-      .upper-message4
-        .name4
-          iwan
-        .date4
-          2020/5/31
-      .lower-message4
-        hi!
+    = render @messages
 
   .chat-main__message-form
-    .form
-      .text-form
-        .text-message
-          type a message
-          .photo-icon
-          %label{class: "input-box__image"}
-            = icon('far', 'image',class: 'icon3')
-            %input{type: "file",class:'Hidden'}
-      .submit
-        Send
+    = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
+      .text_form
+        = f.text_field :content, class: 'text-message', placeholder: 'type a message'
+        = f.label :image, class: 'input-box__image' do
+          = icon('far', 'image', class: 'icon3')
+          = f.file_field :image, class: 'Hidden'
+      = f.submit 'Send', class: 'submit'
+
+  -# = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
+    -#   .text-form
+    -#     = f.text_field :content, class: 'text-message', placeholder: 'type a message'
+    -#       .photo-icon
+    -#       = f.label :image, class: 'input-box__image' do
+    -#         = icon('far', 'image',class: 'icon3')
+    -#         = f.file_field :image, class:'Hidden'
+    -#   =f.submit 'Send', class: 'submit'
