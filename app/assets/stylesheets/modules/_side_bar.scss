@@ -40,21 +40,26 @@
       }
     }
   }
-    .side-bar__group-list {
-    background-color: #2f3e51;
-    height: calc(100vh - 100px);
-    width: 300px;
-    overflow: scroll;
-      .group{
-      box-sizing: border-box;
-      font-size: 15px;
-      padding: 20px 20px 40px;
-      color: #ffffff;
-      font-weight: bold;
+  .side-bar__group-list {
+  background-color: #2f3e51;
+  height: calc(100vh - 100px);
+  width: 300px;
+  overflow: scroll;
+  color: #ffffff;
+    .group{
+    box-sizing: border-box;
+    font-size: 15px;
+    padding: 20px 20px 40px;
+    color: #ffffff;
+    font-weight: bold;
+      a {
+        color: #ffffff;
+        text-decoration: none;
         .message{
         font-size: 11px;
         padding-top: 5px;
         }
       }
     }
+  }
 }

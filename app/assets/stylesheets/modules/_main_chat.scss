@@ -99,14 +99,15 @@
           width: calc(100vw - 500px);
           display: flex;
           position: relative;
+          border: 0px none;
         }
         .input-box__image {
           padding-right: 10px;
           position: absolute;
           right: 160px;
-          color: black;
           .icon3 {
             font-size: 25px;
+            color: black;
           }
           .Hidden {
             display: none;
@@ -120,6 +121,7 @@
         padding: 0px 30px;
         height: 50px;
         line-height: 50px;
+        border: 0px none;
       }
     }
   }
